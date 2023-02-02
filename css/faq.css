@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+/* header
+------------------------------ */
+.header {
+  margin-bottom: 50px;
+}
+
+/* SP-header */
+@media screen and (max-width: 834px) {
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+/* main
+------------------------------ */
+.main {
+  margin: 0 auto;
+}
+
+/* sectionTitle */
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.titleImageLeft {
+  height: 32px;
+  margin-right: 10px;
+}
+.titleImageRight {
+  height: 32px;
+  margin-left: 10px;
+}
+.enTitle {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond';
+}
+.enTitle::before,
+.enTitle::after {
+  content: '';
+  width: 147px;
+  height: 1px;
+  background-color: #1b1b1b;
+}
+.enTitle::before {
+  margin-right: 15px;
+}
+.enTitle::after {
+  margin-left: 15px;
+}
+
+/* SP-sectionTitle */
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 32px;
+  }
+  .titleImageLeft {
+    height: 25px;
+  }
+  .titleImageRight {
+    height: 25px;
+  }
+  .enTitle {
+    font-size: 14px;
+  }
+  .enTitle::before,
+  .enTitle::after {
+    width: 112px;
+  }
+}
+
+/* コンテンツ部分 */
+.faqSection {
+  margin-bottom: 100px;
+}
+.sectionContainer {
+  width: 100%;
+  max-width: 1166px;
+  display: grid;
+  grid-template-columns: 163px 1fr 163px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* アコーディオンパネル */
+.faqContent {
+  margin: 0 20px;
+}
+.accordionArea {
+  list-style: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.accordionArea > li {
+  margin-bottom: 20px;
+}
+.accordionPanelHeadline {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.questionNumber {
+  position: relative;
+  width: 100%;
+  max-width: 50px;
+  padding: 13px 1em;
+  background-color: #1b1b1b;
+}
+.questionNumber > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Cormorant Garamond';
+  line-height: 24px;
+}
+.questionTitle {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  padding: 13px 50px 13px 30px;
+  background-color: #f39800;
+}
+.questionTitle > h3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  position: relative;
+  vertical-align: middle;
+  margin: 0;
+}
+.questionTitle::after {
+  position: absolute;
+  content: url(../images/icon/arrow-down.png);
+  top: 0;
+  right: -15px;
+  display: inline-block;
+  vertical-align: middle;
+  transform: scale(.15) rotate(0deg);
+}
+.accordionPanelHeadline.close .questionTitle::after {
+  transform: scale(.15) rotate(180deg);
+}
+.questionTitle:hover {
+  cursor: pointer;
+}
+.accordionAnswer {
+  display: none;
+  padding: 20px;
+}
+.accordionAnswerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.answerText {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.leftTriangle,
+.rightTriangle {
+  position: relative;
+}
+.leftTriangle::after {
+  position: absolute;
+  content: '';
+  top: 15%;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right: 40px solid #fff;
+}
+.answerText > p {
+  color: #1b1b1b;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+.answerImage {
+  margin-right: 25px;
+}
+.answerImagePictogram {
+  width: 100%;
+  max-height: 60px;
+}
+
+/* 偶数のパネル */
+.ly-flexReverse {
+  flex-direction: row-reverse;
+}
+.rightTriangle::after {
+  position: absolute;
+  content: '';
+  top: 15%;
+  right: -50px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left: 40px solid #fff;
+}
+
+/* ピクトグラム部分 */
+.pictogramImageW {
+  width: 50px;
+}
+.pictogramImageH {
+  height: 50px;
+}
+
+.leftSidePictogram li:hover .rotateAnimeRight {
+  transition: all .5s;
+  transform: rotateZ(360deg);
+}
+
+.leftSidePictogram li:hover .rotateAnimeLeft {
+  transition: all .5s;
+  transform: rotateZ(-360deg);
+}
+
+.rightSidePictogram li:hover .rotateAnimeRight {
+  transition: all .5s;
+  transform: rotateZ(360deg);
+}
+
+.rightSidePictogram li:hover .rotateAnimeLeft {
+  transition: all .5s;
+  transform: rotateZ(-360deg);
+}
+
+/* SP main */
+@media screen and (max-width: 900px) {
+  .main {
+    margin: 0 auto 80px;
+  }
+  .sectionContainer {
+    grid-template-columns: 1fr;
+  }
+  .leftSide,
+  .rightSide {
+    display: none;
+  }
+
+  /* アコーディオンパネル */
+  .questionTitle {
+    padding: 13px 50px 13px 20px;
+  }
+  .questionTitle > h3 {
+    font-size: 1.4rem;
+  }
+  .answerText > p {
+    font-size: 1.4rem;
+  }
+  .leftTriangle::after {
+    top: 15%;
+    left: -35px;
+    border: 15px solid transparent;
+    border-right: 25px solid #fff;
+  }
+  .rightTriangle::after {
+    top: 15%;
+    right: -35px;
+    border: 15px solid transparent;
+    border-left: 25px solid #fff;
+  }
+}

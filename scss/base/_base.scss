@@ -1,0 +1,39 @@
+@use "./../setting/setting-index" as *;
+@use "./../mixin/mixin-index" as m;
+
+/* Base Style
+------------------------------ */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: $pcContentWidth;
+  margin: 0 auto;
+  color: $colorBlack;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: 'Zen Antique Soft', 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: $colorBlack;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
